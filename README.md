@@ -24,8 +24,7 @@ Para configurar XDebug en VS Code y usarlo en este proyecto, hay que realizar lo
             "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",
-            "port": 9000,
-            "log": true,
+            "port": 9003,
             "externalConsole": false,
             "pathMappings": {
                 "/var/www/html": "${workspaceRoot}",
@@ -39,7 +38,7 @@ Para configurar XDebug en VS Code y usarlo en este proyecto, hay que realizar lo
 ~~~
 - Abrir un terminal, y ejecutar el comando "ifconfig"
 - Obtener la dirección IP de la red llamada "docker0". Suele ser un número que empiece en 192.168 ó bien en 172
-- Si la IP es distinta a 192.168.0.1, ir al fichero conf/xdebug.ini, y poner el valor correcto en el parámetro xdebug.remote_host
+- Si la IP es distinta a 192.168.0.1, ir al fichero build/php/xdebug.ini, y poner el valor correcto en el parámetro xdebug.discover_client_host
 
 
 ### Ejecución del contenedor
@@ -65,6 +64,18 @@ dando como resultado algo parecido a esto:
  
  ```
 uid=1000(kiko) gid=1000(kiko) groups=1000(kiko),4(adm).......
+```
+
+Si solamente queremos crear la imagen:
+
+```
+docker-compose build
+```
+
+Para levantar el contenedor:
+
+```
+docker-compose up -d
 ```
 
 Una vez levantado, podemos asegurarnos que está todo correcto ejecutando:

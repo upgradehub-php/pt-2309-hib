@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8-apache
 
 RUN apt-get update
 RUN apt-get install -y git zip libonig-dev libxml2-dev wget vim libfreetype6-dev libjpeg62-turbo-dev libpng-dev
@@ -6,7 +6,7 @@ RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql xml pcntl \
     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd
 
-RUN pecl install xdebug 
+RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
 COPY build/php/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini.new
