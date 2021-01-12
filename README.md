@@ -38,7 +38,7 @@ Para configurar XDebug en VS Code y usarlo en este proyecto, hay que realizar lo
 ~~~
 - Abrir un terminal, y ejecutar el comando "ifconfig"
 - Obtener la dirección IP de la red llamada "docker0". Suele ser un número que empiece en 192.168 ó bien en 172
-- Si la IP es distinta a 192.168.0.1, ir al fichero build/php/xdebug.ini, y poner el valor correcto en el parámetro xdebug.discover_client_host
+- Si la IP es distinta a 192.168.0.1, ir al fichero build/php/xdebug.ini, y poner el valor correcto en el parámetro xdebug.client_host
 
 
 ### Ejecución del contenedor
