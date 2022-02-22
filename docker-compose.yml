@@ -6,7 +6,7 @@ services:
       args:
         user: kiko
         uid: 1000
-    image: "php-environment:7.4"
+    image: "php-environment:8.1"
     container_name: webserver-composer
     environment:
       - APACHE_RUN_USER=#1000

@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:8.1-apache
 
 RUN apt-get update
 RUN apt-get install -y git zip libonig-dev libxml2-dev wget vim libfreetype6-dev libjpeg62-turbo-dev libpng-dev
