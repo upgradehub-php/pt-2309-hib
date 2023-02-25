@@ -6,6 +6,7 @@
     $miCoche->repostarCombustible(30);
     $miCoche->mover(100);
     $miCoche->mover(150);
+    $miCoche->setMatricula("33333BCT");
 
     $miCoche->pintarInfo();
 
@@ -23,3 +24,5 @@
     $ferrari = new Coche("Ferrari", "Testarrosa");
 
     $ferrari->pintarInfo();
+
+    $vehiculo = new Vehiculo();

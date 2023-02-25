@@ -1,12 +1,13 @@
 <?php
+require_once "Vehiculo.php";
 
-class Coche
+class Coche extends Vehiculo
 {
     protected string $marca;
     protected string $modelo;
     protected string $color;
     protected int $kmRecorridos;
-    private float $cantidadCombustible;
+    protected float $cantidadCombustible;
 
     public function __construct(string $marca, string $modelo)
     {
@@ -17,7 +18,7 @@ class Coche
         $this->cantidadCombustible = 0;
     }
 
-    function mover(int $distancia)
+    function mover(float $distancia)
     {
         $this->kmRecorridos += $distancia;
         $this->cantidadCombustible -= $distancia * 0.05;
@@ -120,6 +121,7 @@ class Coche
         echo "<li>Modelo: $this->modelo</li>";
         echo "<li>Km Recorridos: $this->kmRecorridos</li>";
         echo "<li>Cantidad combustible: $this->cantidadCombustible</li>";
+        echo "<li>Matricula: ".$this->getMatricula()."</li>";
         echo "</ul>";
     }
 
