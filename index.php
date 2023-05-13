@@ -53,6 +53,12 @@
         "d" => "Ana"
     ];
 
-    echo(end(array_slice($usuario, 2, 1)));
+    $nombre = "Moises";
 
-    echo $usuario[3];
+    $name= $nombre;
+
+    echo "nombre vale $nombre y name vale $name";
+
+    $name = 'Pepe';
+
+echo "<br>nombre vale $nombre y name vale $name";
