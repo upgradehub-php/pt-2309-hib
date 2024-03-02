@@ -1,5 +1,6 @@
 <?php
     require_once "Coche.php";
+    require_once "Vehiculo.php";
 
     $coche = new Coche("Ford", "Focus");
 
@@ -22,3 +23,5 @@
 
     $ferrari = new Coche("Ferrari", "Testarrosa");
     $ferrari->pintaInfo();
+
+    $vehiculo = new Vehiculo();

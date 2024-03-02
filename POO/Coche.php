@@ -1,12 +1,13 @@
 <?php
+require_once "Vehiculo.php";
 
-class Coche
+class Coche extends Vehiculo
 {
-    private string $marca;
-    private string $modelo;
-    private string $matricula;
-    private float $cantidadCombustible;
-    private int $numKilometrosRecorridos;
+    public string $marca;
+    protected string $modelo;
+    protected string $matricula;
+    protected float $cantidadCombustible;
+    protected int $numKilometrosRecorridos;
 
     public function __construct(string $marca, string $modelo)
     {
